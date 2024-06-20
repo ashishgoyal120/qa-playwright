@@ -1,0 +1,13 @@
+{
+    "adminUsername": "admin.test@sample.dev",
+    "adminPassword": "40e8c748a474ed98:ab52ba26646afc49994c1c19d6d0be48",
+
+    "travelerUsername": "traveler.test@sample.dev",
+    "travelerPassword": "EncryptedPasswordSameAsAbove",
+    
+    "travelManagerUsername": "travelmanager.test@sample.dev",
+    "travelManagerPassword":  "EncryptedPasswordSameAsAbove",
+
+    "sauceDemoUserName": "standard_user",
+    "sauceDemoPassword":  "secret_sauce"
+}

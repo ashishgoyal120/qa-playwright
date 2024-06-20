@@ -1,0 +1,8 @@
+{
+  "name": "staging v2 tests",
+  "url": "https://staging.sample.com/",
+  "username": "dummyuser@sample.dev",
+  "adminUsername": "admin.test@sample.dev",
+  "adminPassword": "dummyencryptedpassword",
+  "password": "dummyencryptedpassword"
+}
