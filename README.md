@@ -11,7 +11,7 @@ Playwright requires Node.js 16+ [System Requirements ](https://playwright.dev/do
 Clone repository
 
 ```bash
-https://github.com/
+https://github.com/ashishgoyal120/qa-playwright
 
 ```
 
