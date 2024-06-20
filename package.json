@@ -1,0 +1,30 @@
+{
+  "name": "qa-playwright",
+  "version": "1.0.0",
+  "description": "playwright automation framework",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "testexamples": "npx playwright test examples",
+    "testexampleone": "npx playwright test examples --workers=2"
+  },
+   "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.6",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.1.1",
+    "typescript": "^5.3.3"
+  }
+}
