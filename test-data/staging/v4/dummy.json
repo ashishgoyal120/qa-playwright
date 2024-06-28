@@ -1,5 +1,5 @@
 {
     "name": "staging v4 test",
-    "username": "dummyuser@sample.dev",
-    "password": "dummyencryptedpassword"
+    "username": "standard_user",
+    "password": "59dd5da64ba7d72f:f0ef7b428c3fdc393d055736b7ff5116"
   }

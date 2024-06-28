@@ -11,7 +11,7 @@ type EnvironmentConfig = {
 };
 
 const stagingConfig: EnvironmentConfig = {
-  v4adminUrl: 'https://',
+  v4adminUrl: 'https://www.saucedemo.com/v1/',
   v3url: '',
   v2url: 'https://www.saucedemo.com/v1/',
   advUrl: 'https://',
