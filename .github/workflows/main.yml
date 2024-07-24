@@ -28,9 +28,6 @@ jobs:
           name: playwright-report-v4
           path: playwright-report/index.html
           retention-days: 30
-      - name: List directory contents
-        run: ls -al
-        working-directory: .
       - name: Test Summary
         uses: test-summary/action@v2
         with:
