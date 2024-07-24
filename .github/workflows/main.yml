@@ -28,11 +28,11 @@ jobs:
           name: playwright-report-v4
           path: playwright-report/index.html
           retention-days: 30
-      - name: Test Summary
-        uses: test-summary/action@v2
-        with:
-          paths: "results.xml"
-        if: always()
+      # - name: Test Summary
+      #   uses: test-summary/action@v2
+      #   with:
+      #     paths: "results.xml"
+      #   if: always()
 
   # testv3:   // If we have another module and If we want to add that another module report then uncomment and give report path accordingly
   #   runs-on: ubuntu-latest
