@@ -2,7 +2,7 @@ import { Page, Locator } from '@playwright/test';
 
 export class NavigationV4 {
   readonly page: Page;
-  readonly peopleTab: Locator;
+  readonly Options: Locator;
   readonly reportingTab: Locator;
   readonly suppliersTab: Locator;
   readonly organizationTab: Locator;
@@ -10,15 +10,15 @@ export class NavigationV4 {
 
   constructor(page: Page) {
     this.page = page;
-    this.peopleTab = page.getByRole('tab', { name: 'People' });
+    this.Options = page.locator('div[class="bm-burger-button"] button');
     this.reportingTab = page.getByRole('tab', { name: 'Reporting' });
     this.suppliersTab = page.getByRole('tab', { name: 'Suppliers' });
     this.organizationTab = page.getByRole('tab', { name: 'Org' });
-    this.headerTitle = page.locator('#header-h1');
+    this.headerTitle = page.locator('#header_container');
   }
 
-  async clickPeopleTab() {
-    await this.peopleTab.click();
+  async clickOptions() {
+    await this.Options.click();
   }
 
   async clickReportingTab() {
