@@ -19,13 +19,13 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Run Playwright tests examples
-        run: npx playwright test tests/examples
+      - name: Run Playwright tests
+        run: npx playwright test 
         continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report-v4
+          name: playwright-report
           path: playwright-report/index.html
           retention-days: 30
       - name: Test Summary
