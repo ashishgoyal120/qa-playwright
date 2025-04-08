@@ -1,0 +1,11 @@
+node_modules
+.github
+.gitignore
+# Playwright Specific
+node_modules/
+test-results/
+playwright-report
+summary.json
+
+# IDE - VSCode
+.vscode/*
