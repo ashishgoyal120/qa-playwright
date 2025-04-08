@@ -29,14 +29,11 @@ let environmentFinal = process.env.ENVIRONMENT || 'staging';
 if (process.env.ENVIRONMENT) {
   if (!VALID_ENVIRONMENTS.includes(environmentFinal.toLowerCase())) {
     console.log(
-      'Invalid environment specified. Please specify one of: ' +
-        VALID_ENVIRONMENTS.join(', '),
+      'Invalid environment specified. Please specify one of: ' + VALID_ENVIRONMENTS.join(', '),
     );
     process.exit(1);
   } else {
-    console.log(
-      `environmentConfig.ts: Running in '${environmentFinal}' environment`,
-    );
+    console.log(`environmentConfig.ts: Running in '${environmentFinal}' environment`);
   }
 } else {
   console.log('Enviornment not set running in default environment: staging');

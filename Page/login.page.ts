@@ -11,15 +11,17 @@ export class LoginPage {
     this.page = page;
     this.username = page.locator('input[name="username"]');
     this.password = page.locator('input[name="password"]');
-    this.loginButton = page.locator('button[type="submit]');
+    this.loginButton = page.locator('button[type="submit"]');
   }
 
   async login() {
     const { adminUsername, adminPassword } = testData;
+    await this.page.waitForLoadState('networkidle');
     await this.page.goto(environmentConfig.adminUrl);
+    await this.page.waitForLoadState('networkidle');
     await this.username.fill(adminUsername);
     await this.password.fill(adminPassword);
     await this.loginButton.click();
-    await this.page.waitForTimeout(8000);
+    await this.page.waitForTimeout(2000);
   }
 }
