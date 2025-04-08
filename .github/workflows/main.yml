@@ -1,0 +1,64 @@
+name: Playwright Tests
+on:
+  schedule:
+    - cron:  '30 02 * * *' # runs at 8 AM Indian Standard Time
+  workflow_dispatch:
+
+jobs:
+  playwrightTest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests examples
+        run: npx playwright test tests/examples
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-v4
+          path: playwright-report/index.html
+          retention-days: 30
+      - name: Test Summary
+        uses: test-summary/action@v2
+        with:
+          paths: "results.xml"
+        if: always()
+
+  # testv3:   // If we have another module and If we want to add that another module report then uncomment and give report path accordingly
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write
+  #     pull-requests: write
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20
+  #     - name: Install dependencies
+  #       run: npm ci
+  #     - name: Install Playwright Browsers
+  #       run: npx playwright install --with-deps
+  #     - name: Run Playwright tests v2
+  #       run: npx playwright test tests/v2
+  #       continue-on-error: true
+  #     - uses: actions/upload-artifact@v4
+  #       if: ${{ !cancelled() }}
+  #       with:
+  #         name: playwright-report-v2
+  #         path: playwright-report/index.html
+  #         retention-days: 30
+  #     - name: Test Summary
+  #       uses: test-summary/action@v2
+  #       with:
+  #         paths: "results.xml"
+  #       if: always()
