@@ -4,4 +4,22 @@
 
 ## Getting started
 
-- This project works on node.js server. Whatever libraries we are going to use we need node.js to interact with the browser.[Node Js Installation](https://nodejs.org/en/download)
+### Prerequisites
+
+- This project works on node.js server. Whatever libraries we are going to use we need node.js to interact with the browser.
+- Download and Install node Js on your machine from here 👉 [Node Js Installation](https://nodejs.org/en/download)
+
+### Installation
+
+- Clone repository
+
+  ```bash
+  https://github.com/ashishgoyal120/qa-playwright.git
+
+  ```
+
+- Navigate to project folder and install npm packages using:
+
+  ```bash
+  npm install
+  ```
